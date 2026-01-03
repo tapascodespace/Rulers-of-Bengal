@@ -4,8 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import TimelineView from "@/components/TimelineView";
 import TableView from "@/components/TableView";
-import RulerDetailsView from "@/components/RulerDetailsView";
-import { Clock, TableIcon, Crown, MapPin, BookOpen } from "lucide-react";
+import { Clock, TableIcon, Crown, MapPin } from "lucide-react";
 import { dynasties, getAllRulers } from "@/data/rulersData";
 
 const Index = () => {
@@ -85,7 +84,7 @@ const Index = () => {
       {/* Main Content */}
       <main className="container py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="w-full max-w-lg mx-auto grid grid-cols-3 mb-8 bg-secondary/50 p-1">
+          <TabsList className="w-full max-w-md mx-auto grid grid-cols-2 mb-8 bg-secondary/50 p-1">
             <TabsTrigger
               value="timeline"
               className="font-sans data-[state=active]:bg-background data-[state=active]:shadow-sm flex items-center gap-2"
@@ -100,13 +99,6 @@ const Index = () => {
               <TableIcon className="h-4 w-4" />
               Explorer
             </TabsTrigger>
-            <TabsTrigger
-              value="details"
-              className="font-sans data-[state=active]:bg-background data-[state=active]:shadow-sm flex items-center gap-2"
-            >
-              <BookOpen className="h-4 w-4" />
-              Details
-            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="timeline" className="animate-fade-in">
@@ -117,10 +109,6 @@ const Index = () => {
 
           <TabsContent value="table" className="animate-fade-in">
             <TableView />
-          </TabsContent>
-
-          <TabsContent value="details" className="animate-fade-in">
-            <RulerDetailsView />
           </TabsContent>
         </Tabs>
       </main>
