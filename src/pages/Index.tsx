@@ -119,7 +119,6 @@ const Index = () => {
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
             <MapPin className="h-4 w-4" />
             <span className="font-sans text-sm">Made by Tapas Banerjee</span>
-            <span className="font-sans text-sm">Historical data compiled from public archives and Wikipedia.</span>
             <span className="font-sans text-sm">X: polymathtapas</span>
           </div>
           <p className="text-sm text-muted-foreground font-sans">Data sourced from historical records and Wikipedia</p>
