@@ -13,8 +13,8 @@ const Index = () => {
   const totalDynasties = dynasties.length;
 
   // Calculate time span
-  const earliestYear = Math.min(...dynasties.map(d => d.startYear));
-  const latestYear = Math.max(...dynasties.map(d => d.endYear));
+  const earliestYear = Math.min(...dynasties.map((d) => d.startYear));
+  const latestYear = Math.max(...dynasties.map((d) => d.endYear));
   const timeSpan = latestYear - earliestYear;
 
   return (
@@ -23,7 +23,7 @@ const Index = () => {
       <header className="relative overflow-hidden border-b border-border/50">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0zNiAxOGMxLjIgMCAyIC44IDIgMnYyMGMwIDEuMi0uOCAyLTIgMkgxOGMtMS4yIDAtMi0uOC0yLTJWMjBjMC0xLjIuOC0yIDItMmgxOHptMCAySDIwdjIwaDE2VjIweiIgZmlsbD0iY3VycmVudENvbG9yIiBmaWxsLW9wYWNpdHk9Ii4wMyIvPjwvZz48L3N2Zz4=')] opacity-50" />
-        
+
         <div className="container relative py-12 md:py-20 px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -44,10 +44,10 @@ const Index = () => {
             <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 leading-tight">
               Rulers of <span className="text-gradient">Bengal</span>
             </h1>
-            
+
             <p className="font-body text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              A comprehensive chronicle of the kings, emperors, and sultans who shaped the history of Bengal 
-              from ancient times to the colonial era.
+              A comprehensive chronicle of the kings, emperors, and sultans who shaped the history of Bengal from
+              ancient times to the colonial era.
             </p>
 
             {/* Stats */}
@@ -85,15 +85,15 @@ const Index = () => {
       <main className="container py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="w-full max-w-md mx-auto grid grid-cols-2 mb-8 bg-secondary/50 p-1">
-            <TabsTrigger 
-              value="timeline" 
+            <TabsTrigger
+              value="timeline"
               className="font-sans data-[state=active]:bg-background data-[state=active]:shadow-sm flex items-center gap-2"
             >
               <Clock className="h-4 w-4" />
               Timeline
             </TabsTrigger>
-            <TabsTrigger 
-              value="table" 
+            <TabsTrigger
+              value="table"
               className="font-sans data-[state=active]:bg-background data-[state=active]:shadow-sm flex items-center gap-2"
             >
               <TableIcon className="h-4 w-4" />
@@ -118,11 +118,11 @@ const Index = () => {
         <div className="container text-center">
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
             <MapPin className="h-4 w-4" />
-            <span className="font-sans text-sm">Bengal Region • Indian Subcontinent</span>
+            <span className="font-sans text-sm">Made by Tapas Banerjee</span>
+            <span className="font-sans text-sm">Historical data compiled from public archives and Wikipedia.</span>
+            <span className="font-sans text-sm">X: polymathtapas</span>
           </div>
-          <p className="text-sm text-muted-foreground font-sans">
-            Data sourced from historical records and Wikipedia
-          </p>
+          <p className="text-sm text-muted-foreground font-sans">Data sourced from historical records and Wikipedia</p>
         </div>
       </footer>
     </div>
