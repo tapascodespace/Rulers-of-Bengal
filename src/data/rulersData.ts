@@ -1,5 +1,5 @@
 export type Era = "Ancient" | "Classical" | "Post-Classical" | "Medieval" | "Colonial";
-export type Religion = "Hindu" | "Buddhist" | "Muslim" | "Mixed" | "Unknown";
+export type Religion = "Hindu" | "Buddhist" | "Muslim" | "Mixed" | "Unknown" | "Protestant";
 
 export interface Ruler {
   id: string;
@@ -1094,6 +1094,7 @@ export const getReligionColor = (religion: Religion): string => {
     Muslim: "religion-muslim",
     Mixed: "religion-mixed",
     Unknown: "religion-unknown",
+    Protestant: "religion-protestant",
   };
   return colors[religion];
 };
